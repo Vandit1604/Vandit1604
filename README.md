@@ -1,7 +1,9 @@
 - 👋 Hi, I’m @Vandit1604
-- 👀 I’m interested in Full Stack Devlopment and Blockchain 
-- 🌱 I’m currently learning Machine learning for a college project 
-- 📫 you can reach me on my socials i have provided 
+- 👀 I’m interested in Full Stack Devlopment and Cloud Native Technologies
+- 🌱 I’m currently learning Golang, building projects on weekends and contributing to OSS most of the times.
+- 📫 you can reach me on
+  - 🐦 [Twitter](https://twitter.com/vandittweets)
+  - 🟦 [LinkedIn](https://www.linkedin.com/in/vandit-singh/)
 
 <!---
 Vandit1604/Vandit1604 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
