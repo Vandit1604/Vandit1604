@@ -21,10 +21,10 @@
 
 ## Experience
 
-**FluidCloud** — Member of Technical Staff *(Nov 2025 to present)*
+**FluidCloud** · Member of Technical Staff *(Nov 2025 to present)*
 Cross-team work across backend and infrastructure. I write custom cloud scanners in Go and deploy them across **Oracle Cloud, AWS, and Azure**, provision infra with **Terraform**, and built **service-to-service auth from scratch**. Also built an **Oracle Cloud cost-reporting** pipeline from scratch using **Oracle Functions** and **DuckDB** to query CUR (cost and usage) data.
 
-**RapidFort** — Software Development Engineer *(Jun 2024 to Nov 2025)*
+**RapidFort** · Software Development Engineer *(Jun 2024 to Nov 2025)*
 - **Community Images:** hardened **50+ OSS container images** (including **IronBank / DoD** images) by shrinking their attack surface.
 - **Scanner:** worked on the core scanner that finds CVEs in Docker images, and built an **AI-assisted "sister-CVE" predictor** (ExploitDB data + Flask + Python).
 - Built **cross-team configuration management** used across prod, dev, and staging.
