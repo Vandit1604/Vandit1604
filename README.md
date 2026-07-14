@@ -24,12 +24,12 @@ At **FluidCloud**, building a Go cloud scanner (Terraform coverage across 10+ AW
 
 Before that, at **RapidFort**: authored 12+ hardened, minimal OSS images (shipped IronBank images used by the U.S. DoD; runtime profiling cut CVEs ~80% and image size ~60%) and built security tooling around CVE detection.
 
-### Building
+### Building (indie)
 
-Two products I'm building (closed source for now):
+Bootstrapping two products solo, closed source for now:
 
-- **[ThreadCite](https://threadcite.live)**
-- **[Argus](https://argushq.cc)**
+- **[ThreadCite](https://threadcite.live)**: finds the Reddit threads ranking on Google for your keywords, tracks your share of voice against competitors, and drafts a coached reply for each. Reddit leads without the ban risk.
+- **[Argus](https://argushq.cc)**: a Chrome extension for X that reads your real funnel (reach, visits, follows, saves), ranks live posts by reply opportunity, and drafts replies in your voice. Turns reach into followers, not vanity metrics.
 
 ### Selected open-source work
 
