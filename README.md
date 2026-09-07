@@ -5,8 +5,8 @@
 <h1 align="center">hey, I'm Vandit 👋</h1>
 
 <p align="center">
-  Go engineer working on <b>distributed systems</b>, <b>cloud infrastructure</b>, and <b>p2p</b>.<br/>
-  Member of Technical Staff at FluidCloud. Merged contributor to Kubernetes, Prometheus, and Jenkins.
+  Go engineer working on <b>distributed systems</b>, <b>cloud infrastructure</b>, and <b>observability</b>.<br/>
+  Merged contributor to <b>Kubernetes core</b>, <b>Prometheus</b>, <b>VictoriaMetrics</b>, and <b>Lightning Labs</b> (Bitcoin).
 </p>
 
 <p align="center">
@@ -22,25 +22,29 @@
 ## Experience
 
 **FluidCloud** · Member of Technical Staff *(Nov 2025 to present)*
-Cross-team work across backend and infrastructure. I write custom cloud scanners in Go and deploy them across **Oracle Cloud, AWS, and Azure**, provision infra with **Terraform**, and built **service-to-service auth from scratch**. Also built an **Oracle Cloud cost-reporting** pipeline from scratch using **Oracle Functions** and **DuckDB** to query CUR (cost and usage) data.
+I write cloud scanners in **Go** that read live resources across **AWS, Oracle Cloud, and Azure**, provision infra with **Terraform**, and I built **service-to-service auth from scratch** with Keycloak (OAuth2 / OIDC). Also shipped an Oracle Cloud cost-reporting pipeline on **Oracle Functions + DuckDB** over CUR data, and run **OpenTelemetry → Prometheus/Grafana** observability across services.
+
+**Aquanode** · Founding Engineer *(Jun 2025 to Oct 2025)*
+Built the **Go control plane** for a GPU cloud from scratch: a **reconciliation loop** that converges deployments onto live state across three providers with unreliable APIs, plus a distributed daemon for backups and health checks.
 
 **RapidFort** · Software Development Engineer *(Jun 2024 to Nov 2025)*
-- **Community Images:** hardened **12+ OSS container images** (including **IronBank / DoD** images) by shrinking their attack surface.
-- **Scanner:** worked on the core scanner that finds CVEs in Docker images, and built an **AI-assisted "sister-CVE" predictor** (ExploitDB data + Flask + Python).
-- Built **cross-team configuration management** used across prod, dev, and staging.
+- **Community Images:** hardened **12+ OSS container images** (including **IronBank / DoD** images); runtime profiling cut CVEs ~80% and image size ~60%.
+- **Scanner:** worked on the core CVE scanner and built an **AI-assisted "sister-CVE" predictor** (Exploit-DB + LLM) plus multi-tenant config management used across prod/dev/staging.
 
 ## Open source
 
-Contributing since 2022 (my first PR landed in **Jenkins**). I love OSS and building things that fix a problem, mine or someone else's.
+**195+ merged PRs since 2022** (the first landed in Jenkins). I like fixing real problems upstream.
 
-- **Kubernetes:** contributor to **[Kueue](https://github.com/kubernetes-sigs/kueue)** (job queueing), plus PRs to `kubernetes/kubernetes` and `test-infra`.
-- **Prometheus:** PRs merged into **[prombench](https://github.com/prometheus/test-infra)** (their benchmarking test bench), the query layer, and `memcached_exporter`.
-- **Jenkins:** rebuilt the docs (11M+ users) on GatsbyJS + Antora and shipped to `jenkins-infra`. **GSoC '23 mentee, '24 mentor.**
-- Currently also contributing to a **Lightning Network node**.
+- **Kubernetes:** merged a regression test into core [`kubernetes/kubernetes`](https://github.com/kubernetes/kubernetes/pull/122625) (#122625); 4 PRs to [`test-infra`](https://github.com/kubernetes/test-infra/pulls?q=is%3Apr+author%3AVandit1604+is%3Amerged) (Prow/CI); 4 to [`kueue`](https://github.com/kubernetes-sigs/kueue/pulls?q=is%3Apr+author%3AVandit1604+is%3Amerged); one to [`gateway-api`](https://github.com/kubernetes-sigs/gateway-api/pull/2705).
+- **Prometheus:** added a `limit` parameter to `/query` and `/query_range` in core [`prometheus/prometheus`](https://github.com/prometheus/prometheus/pull/15552) (#15552); 6 PRs to [`prombench`](https://github.com/prometheus/test-infra/pulls?q=is%3Apr+author%3AVandit1604+is%3Amerged) (their benchmarking bench); a `direct_reclaims_total` metric in [`memcached_exporter`](https://github.com/prometheus/memcached_exporter/pull/227).
+- **VictoriaMetrics:** 2 merged in core [`VictoriaMetrics`](https://github.com/VictoriaMetrics/VictoriaMetrics/pulls?q=is%3Apr+author%3AVandit1604+is%3Amerged) and 2 in [`metricsql`](https://github.com/VictoriaMetrics/metricsql/pulls?q=is%3Apr+author%3AVandit1604+is%3Amerged) (lexer + implicit-subquery detection).
+- **Bitcoin / Lightning (Go):** merged into Lightning Labs' [`lightning-terminal`](https://github.com/lightninglabs/lightning-terminal/pull/1322) (#1322), [`taproot-assets`](https://github.com/lightninglabs/taproot-assets/pull/2267) (#2267), and [`neutrino`](https://github.com/lightninglabs/neutrino/pull/386) (#386).
+- **SuperPlane:** open PRs to [`superplanehq/superplane`](https://github.com/superplanehq/superplane/pulls?q=is%3Apr+author%3AVandit1604) — Go control-plane reliability (graceful SIGTERM draining of in-flight work, bounding a provisioner poll).
+- **Jenkins:** rebuilt the documentation site on **GatsbyJS + Antora** and shipped to `jenkins-infra`. **GSoC '23 mentee, '24 mentor.**
 
 ## Projects
 
-- [**phile-storage**](https://github.com/Vandit1604/phile-storage): content-addressed P2P storage in Go (CIDv1, sha2-256) over go-libp2p, with Kademlia DHT routing and a custom block-transfer protocol.
+- [**phile-storage**](https://github.com/Vandit1604/phile-storage): content-addressed P2P storage in Go (CIDv1, sha2-256) over go-libp2p, with Kademlia DHT routing, trustless retrieval (re-hash and verify per fetch), and a custom block-transfer protocol.
 - [**dockerium**](https://github.com/Vandit1604/dockerium) / [**xontainer**](https://github.com/Vandit1604/xontainer): a minimal rootless container runtime on Linux namespaces and the Docker API.
 - [**go-lb**](https://github.com/Vandit1604/go-lb): a small HTTP load balancer with round-robin routing and health checks.
 - [**otlp-remote-write-poc**](https://github.com/Vandit1604/otlp-remote-write-poc): OpenTelemetry Collector metrics into Prometheus via remote write.
@@ -55,7 +59,7 @@ Two products I'm bootstrapping solo (closed source, for now):
 
 ## About me
 
-I mainly write Go and I'm into distributed systems and web3 infra (hence the Lightning node). I care a lot about building products with tasteful interfaces, the kind you enjoy using.
+I mainly write Go and I'm into distributed systems and web3 infra (hence the Lightning contributions). I care a lot about building products with tasteful interfaces, the kind you enjoy using.
 
 Away from the keyboard I make music: guitar, and beats in FL Studio. There's usually something playing while I build.
 
